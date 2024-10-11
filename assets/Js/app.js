@@ -10,11 +10,8 @@ function changetodarktheme() {
     localStorage.setItem('theme', 'dark');
 }
 
-document.getElementById('theme-toggle').addEventListener('click', () => {
-    const currentTheme = document.getElementById('htmltheme').dataset.bsTheme;
-    if (currentTheme === 'light') {
-        changetodarktheme();
-    } else {
-        changetolighttheme();
-    }
+// loader script
+window.addEventListener('load', function() {
+    document.getElementById('preloader').style.display = 'none';
+    document.getElementById('content').style.display = 'block';
 });
