@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/mnsinghx/public_html/
+    - /bin/cp -R images $DEPLOYPATH
