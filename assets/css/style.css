@@ -4,7 +4,13 @@
 }
 
 /* Start loader style*/
-
+#preloader{
+    background-color: black;
+    display: flex;
+}
+#content{
+    display: none;
+}
 .center{
     display: flex;
     text-align: center;
@@ -35,12 +41,12 @@
     color: #737373;
     font-size: 15px;
     text-transform:capitalize;
-    animation: text 2s ease-in-out  infinite;
+    animation: text 1s ease-in-out  infinite;
 }
 .text p{
     overflow: hidden;
     white-space: nowrap;
-    animation: typing 2.5s steps(40, end) infinite;
+    animation: typing .5s steps(40, end) infinite;
 }
 @keyframes typing {
     from { width: 0; }
@@ -155,6 +161,18 @@ a{
 #our-goal{
     font-size: 1.1rem;
     font-weight: 600;
+}
+/* links color */
+:root {
+    --primary-color: black; 
+}
+
+[data-bs-theme="dark"] {
+    --primary-color: white;
+}
+
+.links {
+    color: var(--primary-color);
 }
 
 /* Media query for index page */
