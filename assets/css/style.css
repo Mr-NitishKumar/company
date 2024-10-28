@@ -146,10 +146,15 @@ a{
     color: black;
     width: 40%;
     min-height: 200px;
-    margin: 20px auto;
+    margin: 20px 20px;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+}
 
+.main-vision{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 

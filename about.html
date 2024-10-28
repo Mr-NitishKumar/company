@@ -15,20 +15,17 @@
     />
 
     <title>About | Mnsingh Group of Companies</title>
-    <link rel="icon" type="image/x-icon" href="assets/image/fav-icon.png">
+    <link rel="icon" type="image/x-icon" href="assets/image/fav-icon.png" />
 
-
-    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <script src="assets/Js/app.js" defer></script>
 
-
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-          const theme = localStorage.getItem('theme') || 'light';
-          document.getElementById('htmltheme').dataset.bsTheme = theme;
+      document.addEventListener("DOMContentLoaded", () => {
+        const theme = localStorage.getItem("theme") || "light";
+        document.getElementById("htmltheme").dataset.bsTheme = theme;
       });
-  </script>
-
+    </script>
   </head>
   <body>
     <!-- Starting of Navbar and Header  -->
@@ -38,7 +35,7 @@
           <a class="navbar-brand" href="/">
             <img id="logo" src="assets/image/fav-icon.jpg" alt=""
           /></a>
-            <h1>MNSINGH</h1>
+          <h1>MNSINGH</h1>
           <button
             class="navbar-toggler"
             type="button"
@@ -177,7 +174,7 @@
           </p>
         </div>
         <div class="service-box">
-          <h3> E-commerce Websites</h3>
+          <h3>E-commerce Websites</h3>
           <p>
             Robust and scalable e-commerce platforms like Flipkart, optimized
             for high-traffic businesses.
@@ -225,7 +222,7 @@
           <p>Web Developer</p>
         </div>
         <div class="team-member">
-          <h4>Vinay Kumar </h4>
+          <h4>Vinay Kumar</h4>
           <p>Web Developer</p>
         </div>
         <div class="team-member">
@@ -247,7 +244,7 @@
           If you're ready to accelerate your business with cutting-edge
           technology solutions, let's connect.
         </p>
-        <form action="#" method="post">
+        <form action="assets/php/send_email.php" method="post">
           <div class="form-group">
             <input type="text" name="name" placeholder="Your Name" required />
           </div>
