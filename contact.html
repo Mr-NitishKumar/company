@@ -139,7 +139,7 @@
     <!-- Starting of Main Content Area -->
     <div class="container hero">
       <h1>Global Group Of Company</h1>
-      <form action="#" method="post">
+      <form id="contactForm" method="post">
           <div class="form-group">
               <label for="name"> Full Name:</label>
               <input type="text" id="name" name="name" required>
@@ -214,5 +214,42 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script>
+        const form = document.getElementById('contactForm');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            const data = {
+                name: name,
+                email: email,
+                message: message
+            };
+
+            fetch('https://mnsingh.pythonanywhere.com/support/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Data send Successfully');
+                    form.reset();
+                } else {
+                    alert('Error sending data. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again later.');
+            });
+        });
+    </script>
   </body>
 </html>
