@@ -222,13 +222,13 @@
 
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
-            const mobile = document.getElementById('mobile').value;
+            const mobile = document.getElementById('Number').value;
             const message = document.getElementById('message').value;
 
             const data = {
                 name: name,
                 email: email,
-                message: '\nMobile :' + mobile + message
+                message: message + '\nMobile :' + mobile
             };
 
             fetch('https://mnsingh.pythonanywhere.com/support/contact', {
